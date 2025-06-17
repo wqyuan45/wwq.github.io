@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页</title>
+    <style>
+        /* 基础样式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --text-color: #333;
+            --light-bg: #f9f9f9;
+            --dark-bg: #fff;
+            --border-color: #eee;
+        }
+        
+        body {
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* 头部样式 */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: var(--dark-bg);
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            object-fit: cover;
+            border: 4px solid var(--primary-color);
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .title {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            color: #555;
+            font-size: 1.3rem;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        /* 主要内容区 */
+        main {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        
+        @media (min-width: 768px) {
+            main {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+        
+        .section {
+            background-color: var(--dark-bg);
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-color);
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        /* 技能标签 */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .skill-tag {
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        /* 联系表单 */
+        .contact-form {
+            margin-top: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+        }
+        
+        /* 页脚 */
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            color: #777;
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="https://via.placeholder.com/120" alt="个人头像" class="avatar">
+            <h1>张三</h1>
+            <p class="title">软件工程师 | 数据科学爱好者</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+        </header>
+        
+        <main>
+            <section class="section">
+                <h2>关于我</h2>
+                <p>专注于前端开发和数据分析，拥有3年软件开发经验，熟悉JavaScript、React和数据可视化技术。</p>
+                <p>致力于通过技术解决实际问题，对人工智能和机器学习在工业场景中的应用有浓厚兴趣。</p>
+                
+                <h2>项目经验</h2>
+                <p><strong>智能工厂数据可视化系统</strong> - 开发前端界面，实现设备状态监控和生产数据可视化，使用React+ECharts</p>
+                <p><strong>学术论文管理平台</strong> - 设计并实现论文检索和管理功能，采用Vue.js框架和RESTful API</p>
+            </section>
+            
+            <section class="section">
+                <h2>技能专长</h2>
+                <div class="skills">
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Vue.js</span>
+                    <span class="skill-tag">HTML5/CSS3</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">数据可视化</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">Webpack</span>
+                </div>
+                
+                <h2>联系方式</h2>
+                <div class="contact-form">
+                    <div class="form-group">
+                        <label for="name">姓名</label>
+                        <input type="text" id="name" placeholder="您的姓名">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">邮箱</label>
+                        <input type="email" id="email" placeholder="您的邮箱">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">留言</label>
+                        <textarea id="message" placeholder="请输入您的留言..."></textarea>
+                    </div>
+                    <button type="submit">发送消息</button>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 个人主页 | 简单前端示例</p>
+        </footer>
+    </div>
+</body>
+</html>
